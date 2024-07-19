@@ -1,6 +1,7 @@
 "use client";
 import img from "next/image";
 import { useState } from "react";
+import IdealCarousel from "../IdealCarousel/Index";
 
 const Hero = () => {
   const [email, setEmail] = useState("");
@@ -60,7 +61,7 @@ const Hero = () => {
             <div className="animate_right hidden md:w-1/2 lg:block">
               <div className="relative 2xl:-mr-7.5">
                
-                <div className=" relative aspect-[700/444] w-full">
+                {/* <div className=" relative aspect-[700/444] w-full">
                   <img
                     className="shadow-solid-l dark:hidden"
                     src="/images/img/law.png"
@@ -75,7 +76,8 @@ const Hero = () => {
                     alt="Hero"
                     // fill
                   />
-                </div>
+                </div> */}
+                <IdealCarousel/>
               </div>
             </div>
           </div>

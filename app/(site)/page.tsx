@@ -14,6 +14,7 @@ import Blog from "@/components/Blog";
 import Testimonial from "@/components/Testimonial";
 import Team from "@/components/Team";
 import CarouselComp from "@/components/Carousel/index"
+import IdealCarousel from '@/components/IdealCarousel/Index'
 
 export const metadata: Metadata = {
   title: "Next.js Starter Template for SaaS Startups - Solid SaaS Boilerplate",
