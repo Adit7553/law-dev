@@ -39,8 +39,9 @@ export default function Home() {
       {/* <FAQ /> */}
       {/* <Testimonial /> */}
       {/* <Pricing /> */}
-      <Contact />
       <CarouselComp/>
+      <Contact />
+     
       {/* <Blog /> */}
     </main>
   );
