@@ -13,13 +13,14 @@ import { motion } from "framer-motion";
 const Carousel = () => {
   return (
     <>
-      <section>
+      <section className="bg-slate-50 dark:bg-blacksection p-5">
         <SectionHeader
           headerInfo={{
             title: "Our Team",
             subtitle: "Meet Our Dedicated Professionals",
             description: `Explore a team of skilled legal experts committed to delivering exceptional service. Our diverse talents and unwavering dedication ensure comprehensive and effective solutions for your legal needs.`,
           }}
+
         />
         <motion.div
           variants={{
@@ -37,10 +38,10 @@ const Carousel = () => {
           whileInView="visible"
           transition={{ duration: 1, delay: 0.1 }}
           viewport={{ once: true }}
-          className="animate_top mt-30 sm:mt-20 md:mx-20 lg:mx-5  "
+          className="animate_top mt-30 sm:mt-20 md:mx-20 lg:mx-5 "
         >
           {/* <!-- Slider main container --> */}
-          <div className="swiper m-3 ">
+          <div className="swiper">
             {/* <!-- Additional required wrapper --> */}
             <Swiper
               spaceBetween={50}

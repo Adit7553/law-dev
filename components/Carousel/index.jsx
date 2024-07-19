@@ -62,7 +62,7 @@ const Carousel = () => {
                   <div className="min-h-[40vh] rounded-xl border-2 border-black p-3">
                     <img
                       src={`/images/img/${i}.jpeg`}
-                      className="h-[78vh] w-[100%] rounded-xl "
+                      className="w-[100%] rounded-xl "
                     />
                   </div>
                 </SwiperSlide>
