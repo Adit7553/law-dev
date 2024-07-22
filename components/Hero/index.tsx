@@ -15,8 +15,8 @@ const Hero = () => {
       <section className="overflow-hidden pb-20 xl:pb-25 sm:pt-40 ">
         <div className="mx-auto max-w-c-1390 px-4 2xl:px-0">
           <div className="flex flex-col md:flex-row lg:items-center lg:gap-3 xl:gap-12.5">
-            <div className="md:w-1/2 pl-[4%] sm:pt-[30%] md:pt-[0%] xl:pt-[0%] lg:pt-[0%]">
-              <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
+            <div className="md:w-1/2 pl-[4%] sm:pt-[5%] md:pt-[0%] xl:pt-[0%] lg:pt-[0%]">
+              <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white mt-[100px] lg:mt-[1px] sm:mt-[1px] xl:mt-[1px]">
                 🔥 Confianzza - Navigating Legal Frontiers
               </h4>
               <h1 className="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero">
