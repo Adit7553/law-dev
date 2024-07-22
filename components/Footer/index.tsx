@@ -1,7 +1,40 @@
 "use client";
 import { motion } from "framer-motion";
+import { Menu } from "@/types/menu";
 
 const Footer = () => {
+  const menuData: Menu[] = [
+    {
+      id: 1,
+      title: "Home",
+      newTab: false,
+      path: "/",
+    },
+    {
+      id: 2,
+      title: "Practice Areas",
+      newTab: false,
+      path: "/#features",
+    },
+    {
+      id: 3,
+      title: "Our Team",
+      newTab: false,
+      path: "/#team",
+    },
+    {
+      id: 4,
+      title: "About Us",
+      newTab: false,
+      path: "/#facts",
+    },
+    {
+      id: 5,
+      title: "Contact Us",
+      newTab: false,
+      path: "/#support",
+    },
+  ];
   return (
     <>
       <footer className="border-t border-stroke bg-white dark:border-strokedark dark:bg-blacksection">
@@ -27,26 +60,26 @@ const Footer = () => {
                 viewport={{ once: true }}
                 className="animate_top w-1/2 lg:w-1/4"
               >
-                <a href="index.html" className="relative">
+                <a href="/">
                   <img
-                    width={110}
-                    height={80}
-                    src="/images/logo/LogoLight.png"
-                    alt="Logo"
-                    className="dark:hidden"
+                    src={"/Logo.svg"}
+                    alt="logo"
+                    width={119.03}
+                    height={"13px"}
+                    style={{ width: 140, height: 40 }}
+                    className="hidden w-full dark:block"
                   />
                   <img
-                    width={110}
-                    height={80}
-                    src="/images/logo/LogoDark.png"
-                    alt="Logo"
-                    className="hidden dark:block"
+                    src="/LogoDark.svg"
+                    alt="logo"
+                    width={119.03}
+                    height={"13px"}
+                    style={{ width: 140, height: 40 }}
+                    className="w-full dark:hidden"
                   />
                 </a>
 
-                <p className="mb-10 mt-5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
+                <p className="mb-10 mt-5">Best legal advice in Dwarka, Delhi</p>
 
                 <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
                   contact
@@ -83,42 +116,22 @@ const Footer = () => {
                   </h4>
 
                   <ul>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Home
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Product
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Careers
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Pricing
-                      </a>
-                    </li>
+                    {menuData.map((data) => {
+                      return (
+                        <li key={data.title}>
+                          <a
+                            href={data.path}
+                            className="mb-3 inline-block hover:text-primary"
+                          >
+                            {data.title}
+                          </a>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </motion.div>
 
-                <motion.div
+                {/* <motion.div
                   variants={{
                     hidden: {
                       opacity: 0,
@@ -141,40 +154,20 @@ const Footer = () => {
                   </h4>
 
                   <ul>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Company
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Press media
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Our Blog
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Contact Us
-                      </a>
-                    </li>
+                    {menuData.map((data) => {
+                      return (
+                        <li key={data.title}>
+                          <a
+                            href={data.path}
+                            className="mb-3 inline-block hover:text-primary"
+                          >
+                            {data.title}
+                          </a>
+                        </li>
+                      );
+                    })}
                   </ul>
-                </motion.div>
+                </motion.div> */}
 
                 <motion.div
                   variants={{
@@ -300,7 +293,7 @@ const Footer = () => {
               className="animate_top"
             >
               <p>
-                &copy; {new Date().getFullYear()} Solid. All rights reserved
+                &copy; {new Date().getFullYear()} Confianzza. All rights reserved
               </p>
             </motion.div>
 
