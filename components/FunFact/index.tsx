@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Counter from "./Counter";
 
 const FunFact = () => {
   return (
@@ -13,7 +14,7 @@ const FunFact = () => {
             height={384}
             src="/images/shape/shape-04.png"
             alt="Man"
-            className="absolute -left-15 -top-25 -z-1 lg:left-0"
+            className="absolute -left-15 -top-25 -z-1 hidden lg:left-0"
           />
           <img
             width={132}
@@ -56,7 +57,16 @@ const FunFact = () => {
               Why Clients Choose Us
             </h2>
             <p className="mx-auto lg:w-11/12">
-            Clients choose us for our unmatched expertise and comprehensive legal support. Our seasoned professionals bring in-depth knowledge across various legal realms, ensuring that our clients receive top-notch guidance. With a client-centric approach, we prioritize individual needs, fostering transparent communication and personalized solutions. Our results-driven mindset, backed by a successful track record, guarantees optimal outcomes for our clients. Upholding the highest standards of integrity, we build lasting relationships based on trust. When you choose us, you opt for reliable legal counsel tailored to your unique needs
+              Clients choose us for our unmatched expertise and comprehensive
+              legal support. Our seasoned professionals bring in-depth knowledge
+              across various legal realms, ensuring that our clients receive
+              top-notch guidance. With a client-centric approach, we prioritize
+              individual needs, fostering transparent communication and
+              personalized solutions. Our results-driven mindset, backed by a
+              successful track record, guarantees optimal outcomes for our
+              clients. Upholding the highest standards of integrity, we build
+              lasting relationships based on trust. When you choose us, you opt
+              for reliable legal counsel tailored to your unique needs
             </p>
           </motion.div>
 
@@ -80,7 +90,7 @@ const FunFact = () => {
               className="animate_top text-center"
             >
               <h3 className="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
-                100+
+                <Counter number={100} suffix="+" />
               </h3>
               <p className="text-lg lg:text-para2">World Wide Clients</p>
             </motion.div>
@@ -103,7 +113,7 @@ const FunFact = () => {
               className="animate_top text-center"
             >
               <h3 className="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
-                300+
+                <Counter number={300} suffix="+" />
               </h3>
               <p className="text-lg lg:text-para2">Cases</p>
             </motion.div>
@@ -126,7 +136,7 @@ const FunFact = () => {
               className="animate_top text-center"
             >
               <h3 className="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
-                10+
+                <Counter number={10} suffix="+" />
               </h3>
               <p className="text-lg lg:text-para2">Award</p>
             </motion.div>
