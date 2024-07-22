@@ -51,7 +51,7 @@ const Gallery = () => {
                 />
             </div>
         </div>
-        <div className="grid gap-4">
+        <div className="grid gap-4 hidden lg:block lg:grid gap-4">
             <div>
                 <img
                     className="object-cover object-start w-full h-auto max-w-full rounded-lg"
