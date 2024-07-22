@@ -7,7 +7,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
 import { useState, useEffect } from "react";
-import ModalD from "@/components/Modal/Accept"
+import ModalD from "@/components/Modal/Accept";
 import "../globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +18,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [showModal, setShowModal] = useState(true)
+  const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    const savedState = sessionStorage.getItem("showModal");
+    setShowModal(savedState !== null ? false : true);
+  });
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`dark:bg-black ${inter.className}`}>
@@ -27,7 +32,9 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="dark"
         >
-          {showModal && <ModalD showModal={showModal} setShowModal={setShowModal}/>}
+          {showModal && (
+            <ModalD showModal={showModal} setShowModal={setShowModal} />
+          )}
           <Lines />
           <Header />
           <ToasterContext />

@@ -12,10 +12,10 @@ const Hero = () => {
 
   return (
     <>
-      <section className="overflow-hidden pb-20 xl:pb-25 sm:pt-40">
+      <section className="overflow-hidden pb-20 xl:pb-25 sm:pt-40 ">
         <div className="mx-auto max-w-c-1390 px-4 2xl:px-0">
           <div className="flex flex-col md:flex-row lg:items-center lg:gap-3 xl:gap-12.5">
-            <div className="md:w-1/2 pl-[4%]">
+            <div className="md:w-1/2 pl-[4%] sm:pt-[30%] md:pt-[0%] xl:pt-[0%] lg:pt-[0%]">
               <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
                 🔥 Confianzza - Navigating Legal Frontiers
               </h4>

@@ -7,7 +7,7 @@ export default function Modal({ showModal, setShowModal }) {
           <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none  ">
             <div className="relative mx-auto my-6 w-auto max-w-3xl">
               {/*content*/}
-              <div className="relative flex w-full flex-col rounded-lg  dark:bg-black light:bg-white shadow-lg outline-none focus:outline-none border-2 border-white">
+              <div className="light:bg-white relative flex w-full flex-col  rounded-lg border-2 border-white shadow-lg outline-none focus:outline-none dark:bg-black">
                 {/*header*/}
                 <div className="border-blueGray-200 flex items-start justify-between rounded-t border-b border-solid p-5">
                   <h3 className="text-3xl font-semibold">Disclaimer</h3>
@@ -46,7 +46,10 @@ export default function Modal({ showModal, setShowModal }) {
                   <button
                     className="mb-1 mr-1 rounded bg-emerald-500 px-6 py-3 text-sm font-bold uppercase text-white shadow outline-none transition-all duration-150 ease-linear hover:shadow-lg focus:outline-none active:bg-emerald-600"
                     type="button"
-                    onClick={() => setShowModal(false)}
+                    onClick={() => {
+                      sessionStorage.setItem("showModal", true);
+                      setShowModal(false);
+                    }}
                   >
                     Agree
                   </button>
