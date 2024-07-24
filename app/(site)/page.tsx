@@ -18,8 +18,8 @@ import IdealCarousel from '@/components/IdealCarousel/Index'
 import Gallery from '@/components/Gallery/index'
 
 export const metadata: Metadata = {
-  title: "Next.js Starter Template for SaaS Startups - Solid SaaS Boilerplate",
-  description: "This is Home for Solid Pro",
+  title: "Confianzza Law Firm",
+  description: "Best Leagal Advice in Dwarka",
   // other metadata
 };
 
