@@ -16,6 +16,7 @@ import Team from "@/components/Team";
 import CarouselComp from "@/components/Carousel/index"
 import IdealCarousel from '@/components/IdealCarousel/Index'
 import Gallery from '@/components/Gallery/index'
+import HeroCarousel from '@/components/HeroCarousel/Index'
 
 export const metadata: Metadata = {
   title: "Confianzza Law Firm",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
-      
+      <HeroCarousel/>
       <Hero />
       <Team />
       {/* <Brands /> */}
